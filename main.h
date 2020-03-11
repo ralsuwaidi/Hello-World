@@ -55,11 +55,11 @@ void listOfPosts(json jsonResult, bool alwaysWrite) {
 		string author = jsonResult["data"][i]["author"];
 		
 		if (((url.find("mega") != std::string::npos) || (url.find("hub.") != std::string::npos)) && !alwaysWrite ) {
-			writeToFile << title << "," << score << "," << created_utc << "," << subreddit << "," << author << "," << url << endl;
+			writeToFile << "\"" << title <<  "\"" << "," << score << "," << created_utc << "," << subreddit << "," << author << "," << url << endl;
 		}
 
 		if (alwaysWrite) {
-			writeToFile << title << "," << score << "," << created_utc << "," << subreddit << "," << author << "," << url << endl;
+			writeToFile << "\"" << title << "\"" << "," << score << "," << created_utc << "," << subreddit << "," << author << "," << url << endl;
 		}
 	}
 
