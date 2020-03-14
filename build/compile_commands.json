@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/rashed/development/Hello-World/build",
+  "command": "/usr/bin/c++   -I/home/rashed/development/Hello-World/include -I/home/rashed/development/Hello-World/include/curl  -g   -o CMakeFiles/ParseReddit.dir/src/Main.cpp.o -c /home/rashed/development/Hello-World/src/Main.cpp",
+  "file": "/home/rashed/development/Hello-World/src/Main.cpp"
+}
+]

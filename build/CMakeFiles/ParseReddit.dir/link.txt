@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ParseReddit.dir/src/Main.cpp.o  -o bin/ParseReddit  -L/home/rashed/development/Hello-World/build/bin -Wl,-rpath,/home/rashed/development/Hello-World/build/bin -lcurl 
