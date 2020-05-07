@@ -45,7 +45,10 @@ Item {
                         anchors.left: parent.left
                         anchors.right: parent.right
                         rippleColor: "#deffffff"
-                        onClicked: root.clicked()
+                        onClicked: {
+                            foo.test_slot("Test")
+                            root.clicked()
+                        }
                     }
 
                     Text {

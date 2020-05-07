@@ -5,6 +5,15 @@ import "./config.js" as Config
 
 Item {
 
+    id: mainItem
+    signal reemitted(point p)
+    // connects to reemitted
+    Component.onCompleted: Manager.dataReady.connect(mainItem.reemitted)
+    onReemitted: {
+        series1.addpoint(p.y)
+        console.log(p.y)
+    }
+
     Rectangle {
         id: chartsarea
         color: "#ffffff"

@@ -20,12 +20,14 @@ ApplicationWindow {
     property int paneElevation: 4
 
     signal reemitted(point p)
+    // connects to reemitted
     Component.onCompleted: Manager.dataReady.connect(mainWindow.reemitted)
     onReemitted: {
         testXAxis.max = Math.max(testXAxis.max, p.x)
         testXAxis.min = Math.min(testXAxis.min, p.x)
         testYAxis.max = Math.max(testYAxis.max, p.y)
         testYAxis.min = Math.min(testYAxis.min, p.y)
+        console.log(p.y)
         mainLine.append(p.x, p.y)
     }
 
